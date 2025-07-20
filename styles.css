@@ -80,6 +80,41 @@ button:hover {
 }
 
 /* === Search Page Specific Styling === */
+.searchpage .search-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.searchpage .search-controls h1 {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+.searchpage .search-controls input,
+.searchpage .search-controls select,
+.searchpage .search-controls button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.searchpage .search-controls button {
+    background-color: #00bfff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.searchpage .search-controls button:hover {
+    background-color: #009acd;
+}
+
 .searchpage input,
 .searchpage select {
     padding: 10px;
