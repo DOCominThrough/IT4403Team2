@@ -8,15 +8,17 @@
 <body class="searchpage">
 
    <h1>Search Movies/TV Shows</h1>
-  <input id="searchInput" placeholder="Search..." />
-  <select id="searchType">
-    <option value="movie">Movie</option>
-    <option value="tv">TV Show</option>
-  </select>
-  <button onclick="search()">Search</button>
-  <button onclick="toggleDisplay()">Toggle Display</button>
-  <button onclick="loadPopular()">Load Popular</button>
-
+  <div class="search-controls">
+    <input id="searchInput" placeholder="Search..." />
+    <select id="searchType">
+      <option value="movie">Movie</option>
+      <option value="tv">TV Show</option>
+    </select>
+    <button onclick="search()">Search</button>
+    <button onclick="toggleDisplay()">Toggle Display</button>
+    <button onclick="loadPopular()">Load Popular</button>
+  </div>
+    
   <div id="results" class="grid"></div>
 
   <h2>Favorites</h2>
