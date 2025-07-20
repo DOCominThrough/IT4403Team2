@@ -1,3 +1,4 @@
+/* === Shared Base Styling === */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,36 @@ body {
     padding: 20px;
 }
 
-.container {
+h1, h2, h3 {
+    color: #00bfff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00bfff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #009acd;
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* === Homepage Specific Styling === */
+.homepage .container {
     max-width: 600px;
     margin: 50px auto;
     background-color: rgba(0, 0, 0, 0.5);
@@ -21,41 +51,121 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-h1, h2, h3 {
-    color: #00bfff;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.description, .author {
+.homepage .description,
+.homepage .author {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
 
-.toc {
+.homepage .toc {
     list-style-type: none;
     text-align: center;
 }
 
-.toc li {
+.homepage .toc li {
     margin: 10px 0;
 }
 
-.toc a {
+.homepage .toc a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
     transition: color 0.3s, transform 0.3s;
 }
 
-.toc a:hover {
+.homepage .toc a:hover {
     color: #00bfff;
     transform: scale(1.05);
 }
 
+/* === Search Page Specific Styling === */
+.searchpage input,
+.searchpage select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 200px;
+}
+
+.searchpage .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.searchpage .list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.searchpage .card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.searchpage .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.searchpage .card img {
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.searchpage .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    z-index: 10;
+}
+
+.searchpage .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e2a38;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+    display: none;
+    z-index: 20;
+}
+
+.searchpage .modal h3 {
+    margin-bottom: 10px;
+    color: #00bfff;
+}
+
+.searchpage .modal p {
+    margin: 10px 0;
+}
+
+.searchpage .modal button {
+    margin-top: 10px;
+}
+
 @media (max-width: 640px) {
-    .container {
-        padding: 20px;
+    .searchpage input,
+    .searchpage select {
+        width: 100%;
     }
 }
